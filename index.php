@@ -7,7 +7,7 @@
 </head>
 <body>
     
-<h1>PHP com PDO - Exemplo 2</h1>
+<h1>PHP com POO - Exemplo 2</h1>
 <hr>
 
 <h2>Assuntos abordados:</h2>
