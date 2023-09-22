@@ -32,11 +32,28 @@ $clienteA->telefones = ["11-2134-0300","11-95655-5555"];
 $clienteB->telefones = ["777-777-777"];
 
 $clienteA->senha =password_hash("123abc",PASSWORD_DEFAULT);
+
+$clienteA->email = "blabla@gmail.com";
 ?>
 <hr>
 <h3><?=$clienteA->nome?></h3>
 <h3><?=$clienteB->nome?></h3>
+<p><?=$clienteA->email?></p>
+<p>telefones:
+    <?=implode(", ",$clienteB->telefones)?>
+</p>
+
+<p>Telefone (Cliente A) (Usando Loop)</p>
+<ul>
+<?php foreach($clienteA->telefones as $telefone) { ?>
+    <li>
+        <?=$telefone?>
+    </li>
+<?php } ?>
+
+
+</ul>
 <pre><?=var_dump($clienteA,$clienteB)?></pre>
-<h2>Dados dos Objetos</h2>
+
 </body>
 </html>
