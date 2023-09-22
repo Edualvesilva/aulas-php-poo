@@ -39,7 +39,7 @@ $clienteA->email = "blabla@gmail.com";
 <h3><?=$clienteA->nome?></h3>
 <h3><?=$clienteB->nome?></h3>
 <p><?=$clienteA->email?></p>
-<p>telefones:
+<p>telefone:
     <?=implode(", ",$clienteB->telefones)?>
 </p>
 
