@@ -3,17 +3,17 @@ class Cliente{
 
     // Propriedades (ou atributos)
     public string $nome;
-    public string $email;
+    public string $email = ""; // valor padrão
     public string $senha;
     public array $telefones;
 
     // Métodos (ou comportamentos)
     public function ExibirDados():void{
-
+        echo "<section>";
+        echo "<h2> $this->nome</h2>";
+        echo "<p> $this->email</p>";
+        echo "</section>";
     }
-
 }
-
-
 
 ?>

@@ -15,6 +15,7 @@
     <li>Acesso direto ás propriedades</li>
     <li>Atribuição e leitura de dados</li>
     <li>Chamada de método</li>
+    <li>uso do <code>$this</code> para acessar recursos dentro da própria classe</li>
 </ul>
 <?php
 // Importando a Classe
@@ -47,10 +48,13 @@ $clienteA->email = "blabla@gmail.com";
 <ul>
 <?php foreach($clienteA->telefones as $telefone) { ?>
     <li>
-        <?=$telefone?>
+     <?=$telefone?>
     </li>
 <?php } ?>
 
+<h2>Acessando os dados através de um método</h2>
+<?=$clienteA->ExibirDados()?>
+<?=$clienteB->ExibirDados()?>
 
 </ul>
 <pre><?=var_dump($clienteA,$clienteB)?></pre>
