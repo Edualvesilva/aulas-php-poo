@@ -25,10 +25,15 @@ $clienteA = new Cliente;
 // $clienteA->set = "Edu";
 
 /* Usando o Setter para atribuir um valor à propriedade privada "nome"  */
-$clienteA->setNome("Fulano da Silva")
+$clienteA->setNome("Fulano da Silva");
+
+$clienteA->setEmail("Fulano@gmail.com");
+$clienteA->setSenha("123abc");
 ?>
 <!-- Usando getter para ler/acessar dados privados -->
 <p>Nome: <?=$clienteA->getNome()?></p>
+<p>Email: <?=$clienteA->getEmail()?></p>
+<p>Senha: <?=$clienteA->getSenha()?></p>
 <pre><?=var_dump($clienteA)?></pre>
 </body>
 </html>
