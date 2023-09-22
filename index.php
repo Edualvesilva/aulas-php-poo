@@ -7,7 +7,7 @@
 </head>
 <body>
     
-<h1>PHP com PDO</h1>
+<h1>PHP com POO</h1>
 <hr>
 
 
