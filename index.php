@@ -27,6 +27,8 @@ $clienteA = new Cliente;
 /* Usando o Setter para atribuir um valor à propriedade privada "nome"  */
 $clienteA->setNome("Fulano da Silva")
 ?>
+<!-- Usando getter para ler/acessar dados privados -->
+<p>Nome: <?=$clienteA->getNome()?></p>
 <pre><?=var_dump($clienteA)?></pre>
 </body>
 </html>
