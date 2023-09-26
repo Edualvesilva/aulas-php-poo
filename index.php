@@ -3,37 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo 4</title>
+    <title>Exemplo 5</title>
 </head>
 <body>
     
-<h1>PHP com POO - Exemplo 4</h1>
+<h1>PHP com POO - Exemplo 5</h1>
 <hr>
 
 <h2>Assuntos abordados:</h2>
 <ul>
- <li>Encapsulamento</li>
- <li>Modificadores de visibilidade (public,private e protected)</li>
+ <li>Herança (Super Classe e Sub Classe)</li>
+ <li><li>
 
 </ul>
 <?php
+require_once "src/PessoaFisica.php";
+require_once "src/PessoaJuridica.php";
+$clientePF = new PessoaFisica;
+$clientePJ = new PessoaJuridica;
+// colocar um nome no Cliente PF
+$clientePF->setNome("Messi");
+$clientePF->setEmail("TheGoat@gmail.com");
+$clientePF->setIdade(36);
+$clientePF->setCpf("123.456.789-00");
 
-require_once "src/Cliente.php";
-$clienteA = new Cliente;
+$clientePJ->setNome("Beltrano S/A");
+$clientePJ->setEmail("blablabla@gmail.com");
+$clientePJ->setAnoFundacao(2000);
+$clientePJ->setCnpj("32.088.0001/000.41");
+$clientePJ->setNomeFantasia("Bla bla bla informática");
 
-// o código abaixo dará erro pois a propriedade é privada! 
-// $clienteA->set = "Edu";
 
-/* Usando o Setter para atribuir um valor à propriedade privada "nome"  */
-$clienteA->setNome("Fulano da Silva");
 
-$clienteA->setEmail("Fulano@gmail.com");
-$clienteA->setSenha("123abc");
+
+
 ?>
-<!-- Usando getter para ler/acessar dados privados -->
-<p>Nome: <?=$clienteA->getNome()?></p>
-<p>Email: <?=$clienteA->getEmail()?></p>
-<p>Senha: <?=$clienteA->getSenha()?></p>
-<pre><?=var_dump($clienteA)?></pre>
+
+<pre><?=var_dump($clientePF)?></pre>
+<pre><?=var_dump($clientePJ)?></pre>
+
 </body>
 </html>
