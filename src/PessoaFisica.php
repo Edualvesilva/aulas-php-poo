@@ -5,6 +5,11 @@ class PessoaFisica extends Cliente{
     private string $cpf;
 
 
+    public function __construct(){
+        
+        $this->setSituacao("Normal");
+    }
+ 
     /**
      * Get the value of idade
      *
@@ -52,6 +57,9 @@ class PessoaFisica extends Cliente{
 
         return $this;
     }
+
+    
+
 }
 
 ?>

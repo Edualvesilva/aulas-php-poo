@@ -13,8 +13,9 @@
 <h2>Assuntos abordados:</h2>
 <ul>
  <li>Herança (Super Classe e Sub Classe)</li>
- <li><li>
-
+ <li>Métodos/propriedades protegidos (acessíveis apenas pela classe e que foram definidos e pelas subclasses)</li>
+ <li>Classe abstrata</li>
+ <li>Classe Final</li>
 </ul>
 <?php
 require_once "src/PessoaFisica.php";
@@ -33,14 +34,17 @@ $clientePJ->setAnoFundacao(2000);
 $clientePJ->setCnpj("32.088.0001/000.41");
 $clientePJ->setNomeFantasia("Bla bla bla informática");
 
-
-
-
-
 ?>
 
 <pre><?=var_dump($clientePF)?></pre>
 <pre><?=var_dump($clientePJ)?></pre>
 
+<?php
+require_once "src/Cliente.php";
+$clienteGenerico = new Cliente;
+
+?>
+
+<pre><?=var_dump($clienteGenerico)?></pre>
 </body>
 </html>
