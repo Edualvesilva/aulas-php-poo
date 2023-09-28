@@ -3,19 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo 5</title>
+    <title>Exemplo 6</title>
 </head>
 <body>
     
-<h1>PHP com POO - Exemplo 5</h1>
+<h1>PHP com POO - Exemplo 6</h1>
 <hr>
 
 <h2>Assuntos abordados:</h2>
 <ul>
- <li>Herança (Super Classe e Sub Classe)</li>
- <li>Métodos/propriedades protegidos (acessíveis apenas pela classe e que foram definidos e pelas subclasses)</li>
- <li>Classe abstrata: não permite instâncias/objetos ,serve apenas de modelo para subclasses.</li>
- <li>Classe Final: não permite herança,ou seja, não aceita a criação de Subclasses.</li>
+
 </ul>
 <?php
 require_once "src/PessoaFisica.php";
@@ -35,26 +32,17 @@ $clientePJ->setCnpj("32.088.0001/000.41");
 $clientePJ->setNomeFantasia("Bla bla bla informática");
 
 ?>
+<hr>
 
-<pre><?=var_dump($clientePF)?></pre>
-<pre><?=var_dump($clientePJ)?></pre>
+<h2>Saída de Dados</h2>
 
-<?php
-require_once "src/MEI.php";
-$clienteMEI = new MEI;
-$clienteMEI->setNome("SCCP");
-$clienteMEI->setAnoFundacao(1910);
-$clienteMEI->setNomeFantasia("Corinthians");
-$clienteMEI->setAreaDeAtuacao("Futebol");
+<section>
+    <?=$clientePF->exibirDados()?>
+</section>
 
-?>
+<section>
+    <?=$clientePF->exibirDados()?>
+</section>
 
-<?php
-require_once "src/Cliente.php";
-$clienteGenerico = new Cliente;
-
-?>
-<!-- da erro pois cliente é uma classe abstrata -->
-<pre><?=var_dump($clienteGenerico)?></pre>
 </body>
 </html>
