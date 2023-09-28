@@ -1,6 +1,7 @@
 <?php
 require_once "Cliente.php";
-class PessoaJuridica extends Cliente {
+class PessoaJuridica extends Cliente
+{
     private int $anoFundacao;
     private string $cnpj;
     private string $nomeFantasia;
@@ -10,17 +11,16 @@ class PessoaJuridica extends Cliente {
     public function __construct()
     {
         /* Acessando o método setter PROTEGIDO (existente em Cliente)*/
-        $this->setSituacao("Em análise");        
+        $this->setSituacao("Em análise");
     }
 
     public function exibirDados(): void
     {
-        echo "<h3>Classe Pessoa Juridica</h3>";
-        echo "<h4>".$this->getNome()."</h4>";
-        echo "<p>".$this->getSituacao()."</p>";
-        echo "<p>".$this->nomeFantasia."</p>";
+        /* parent::recursos
+    permite o acesso aos recursos da Classe Pai (superClasse) */
+        parent::exibirDados();
+        echo "<p>Nome fantasia: $this->nomeFantasia</p>";
     }
-
 
 
     public function getAnoFundacao(): int
@@ -28,7 +28,7 @@ class PessoaJuridica extends Cliente {
         return $this->anoFundacao;
     }
 
- 
+
     public function setAnoFundacao(int $anoFundacao): self
     {
         $this->anoFundacao = $anoFundacao;
@@ -42,7 +42,7 @@ class PessoaJuridica extends Cliente {
         return $this->cnpj;
     }
 
- 
+
     public function setCnpj(string $cnpj): self
     {
         $this->cnpj = $cnpj;
@@ -50,13 +50,13 @@ class PessoaJuridica extends Cliente {
         return $this;
     }
 
-   
+
     public function getNomeFantasia(): string
     {
         return $this->nomeFantasia;
     }
 
-   
+
     public function setNomeFantasia(string $nomeFantasia): self
     {
         $this->nomeFantasia = $nomeFantasia;
@@ -64,8 +64,3 @@ class PessoaJuridica extends Cliente {
         return $this;
     }
 }
-
-
-
-
-?>
