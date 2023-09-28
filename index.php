@@ -37,7 +37,7 @@ $clientePJ->setNomeFantasia("Bla bla bla informática");
 <h2>Saída de Dados</h2>
 
 <section>
-    <?=$clientePF->exibirDados()?>
+    <?=$clientePJ->exibirDados()?>
 </section>
 
 <section>
