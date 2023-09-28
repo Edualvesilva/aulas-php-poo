@@ -4,50 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo 7</title>
+    <title>Exemplo 8</title>
 </head>
 
 <body>
 
-    <h1>PHP com POO - Exemplo 7</h1>
+    <h1>PHP com POO - Exemplo 8</h1>
     <hr>
 
     <h2>Assuntos abordados:</h2>
 
     <ul>
-    <li>Polimorfismo</li>
-    <li>Sobreposição de métodos</li>
-    <li>Uso do <code>parent</code> para acessar superClasse</li>
+    <li>Propriedades e métodos estáticos</li>
+    <li>Acesso direto sem necessidade de objetos/instâncias</li>
+    <li>Uso do <code>self</code> para acesso (dentro de classe) aos recursos estáticos</li>
     </ul>
-    <?php
-    require_once "src/PessoaFisica.php";
-    require_once "src/PessoaJuridica.php";
-    $clientePF = new PessoaFisica;
-    $clientePJ = new PessoaJuridica;
-    // colocar um nome no Cliente PF
-    $clientePF->setNome("Messi");
-    $clientePF->setEmail("TheGoat@gmail.com");
-    $clientePF->setIdade(36);
-    $clientePF->setCpf("123.456.789-00");
+    
+<?php
+require_once "src/PessoaFisica.php";
+$cliente1 = new PessoaFisica;
+$cliente1->setNome("Astrogildo");
+$cliente1->setIdade(78);
 
-    $clientePJ->setNome("Beltrano S/A");
-    $clientePJ->setEmail("blablabla@gmail.com");
-    $clientePJ->setAnoFundacao(2000);
-    $clientePJ->setCnpj("32.088.0001/000.41");
-    $clientePJ->setNomeFantasia("Bla bla bla informática");
+$cliente2 = new PessoaFisica;
+$cliente2->setNome("Enzo");
+$cliente2->setIdade(19);
 
-    ?>
-    <hr>
+require_once "src/Utilitarios.php";
+Utilitarios::obterData();
+?>
+<h2>Atendimentos do dia: <?=Utilitarios::$dataAtual?></h2>
 
-    <h2>Saída de Dados</h2>
+<h3>Cliente <?=$cliente1->getNome()?></h3>
+<p>Tipo de Atendimento <?=Utilitarios::definirAtendimento($cliente1->getIdade())?></p>
 
-    <section>
-        <?= $clientePJ->exibirDados() ?>
-    </section>
+<h3>Cliente <?=$cliente2->getNome()?></h3>
+<p>Tipo de Atendimento <?=Utilitarios::definirAtendimento($cliente2->getIdade())?></p>
 
-    <section>
-        <?= $clientePF->exibirDados() ?>
-    </section>
+
+
+
 
 </body>
 
