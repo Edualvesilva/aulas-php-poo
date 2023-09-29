@@ -23,11 +23,29 @@
 <?php
 /* Só de fazer o require/importação das classes (SEM NAMESPACE), 
 já dá erro no servidor devido a terem o mesmo nome*/
+
+use Fornecedor\Pagamento;
+use Prestador\Pagamento as PrestadorPagamento;
+
 require_once "src/fornecedores/Pagamento.php";
 require_once "src/prestadores/Pagamento.php"; 
 
+/* 
+forma 1 :
 $pagamentoFornecedor = new Fornecedor\Pagamento;
-$pagamentoPrestador = new Prestador\Pagamento;
+$pagamentoPrestador = new Prestador\Pagamento; */
+
+// Forma 2 : 
+/* use Fornecedor\Pagamento;
+use Prestador\Pagamento as PrestadorPagamento;
+
+$pagamentoFornecedor = new Pagamento;
+$pagamentoPrestador = new PrestadorPagamento; */
+
+$pagamentoFornecedor = new Pagamento;
+$pagamentoPrestador = new PrestadorPagamento;
+
+
 ?>
 
 <pre><?=var_dump($pagamentoFornecedor)?></pre>
