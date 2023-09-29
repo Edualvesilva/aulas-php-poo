@@ -1,0 +1,10 @@
+{
+    "name":"eduardo/aulas-php-poo",
+    "description": "Exemplo de projeto PHP com Orientação a objetos e com classes gerenciadas pelo Composer.",
+    "autoload" : {
+        "psr-4" : {
+            "Cleiton\\" : "src/"
+        }
+    }
+
+}
