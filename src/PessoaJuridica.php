@@ -1,6 +1,5 @@
 <?php
 namespace Cleiton;
-require_once "Cliente.php";
 class PessoaJuridica extends Cliente
 {
     private int $anoFundacao;

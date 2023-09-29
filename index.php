@@ -21,18 +21,15 @@
     </ul>
   
 <?php
+
+use Cleiton\Escola;
 use Cleiton\MEI;
 use Cleiton\PessoaFisica;
 use Cleiton\PessoaJuridica;
 use Fornecedor\Pagamento;
 use Prestador\Pagamento as PrestadorPagamento;
 
-require_once "src/fornecedores/Pagamento.php";
-require_once "src/prestadores/Pagamento.php"; 
-require_once "src/Cliente.php";
-require_once "src/PessoaFisica.php";
-require_once "src/PessoaJuridica.php";
-require_once "src/MEI.php";
+require_once "vendor/autoload.php";
 
 $pagamentoFornecedor = new Pagamento;
 $pagamentoPrestador = new PrestadorPagamento;
@@ -53,6 +50,13 @@ $clienteMEi->setAreaDeAtuacao("Roupas");
 <p>Pessoa Fisica: <?=$clientePF->getNome()?></p>
 <p>Pessoa Juridica (Cnpj): <?=$clientePJ->getCnpj()?></p>
 <p>MEI: (área de Atuação): <?=$clienteMEi->getAreaDeAtuacao()?></p>
+<hr>
+
+<?php
+$escola = new Escola;
+var_dump($escola);
+?>
+
 </body>
 
 </html>
