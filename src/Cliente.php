@@ -1,4 +1,5 @@
 <?php
+namespace Cleiton;
 /* Classe Abstrata Não pode ser instanciada,
 ou seja, não é possível criar um objeto a partir
 desta classe. ela é usada apenas como modelo para

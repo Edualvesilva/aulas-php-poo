@@ -44,12 +44,15 @@ $pagamentoPrestador = new PrestadorPagamento; */
 
 $pagamentoFornecedor = new Pagamento;
 $pagamentoPrestador = new PrestadorPagamento;
-
-
 ?>
 
 <pre><?=var_dump($pagamentoFornecedor)?></pre>
 <pre><?=var_dump($pagamentoPrestador)?></pre>
+
+<hr>
+
+
+
 </body>
 
 </html>

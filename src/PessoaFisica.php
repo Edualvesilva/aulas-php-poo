@@ -1,4 +1,5 @@
 <?php
+namespace Cleiton;
 require_once "Cliente.php";
 final class PessoaFisica extends Cliente{
     private int $idade;
